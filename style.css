@@ -1,0 +1,78 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f9f9f9; /* Light background for better readability */
+    color: #333; /* Neutral text color */
+}
+
+/* Header styling */
+header {
+    background-color: #F2D5DD;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Main content */
+main {
+    padding: 20px;
+}
+
+main h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #F26D6D;
+}
+
+main ul {
+    list-style-type: none; /* Remove default bullet points */
+    margin-bottom: 20px;
+}
+
+main li {
+    margin-bottom: 10px;
+}
+
+main img {
+    margin: 10px 5px; /* Space between images */
+    border: 2px solid #ddd; /* Add subtle border */
+    border-radius: 5px;
+}
+
+main a h3 {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    color: #007BFF; /* Accessible blue for links */
+    text-decoration: none;
+}
+
+main a h3:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Footer styling */
+footer {
+    background-color: #333; /* Dark footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+}
