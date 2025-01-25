@@ -10,8 +10,10 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #f9f9f9; /* Light background for better readability */
+    background-color: #f2e5e4;
     color: #333; /* Neutral text color */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for light/dark mode */
+    animation: fade-in 0.5s ease-in-out;
 }
 
 /* Header styling */
@@ -33,6 +35,7 @@ header p {
 /* Main content */
 main {
     padding: 20px;
+    transition: background-color 0.5s ease; /* Smooth transition for main content */
 }
 
 main h2 {
@@ -53,19 +56,19 @@ main li {
 main img {
     margin: 10px 5px; /* Space between images */
     border: 2px solid #ddd; /* Add subtle border */
-    border-radius: 5px;
+    border-radius: 5px; /* Add rounded corners */
 }
 
 main a h3 {
     margin: 20px 0;
     font-size: 1.5rem;
-    color: #007BFF; /* Accessible blue for links */
+    color: #6ab2ff; /* Accessible blue for links */
     text-decoration: none;
 }
 
 main a h3:hover {
     text-decoration: underline;
-    color: #0056b3; /* Darker blue on hover */
+    color: #6ab2ff; /* Darker blue on hover */
 }
 
 /* Footer styling */
@@ -75,4 +78,104 @@ footer {
     text-align: center;
     padding: 10px;
     font-size: 0.9rem;
+    transition: background-color 0.5s ease; /* Smooth transition for footer */
 }
+
+/* General Button Styling */
+button {
+    padding: 5px 15px; /* Add spacing inside the button */
+    font-size: 1rem; /* Set a readable font size */
+    font-family: Arial, sans-serif; /* Match the site's font */
+    background-color: #191919; 
+    color: #ffffff; /*text*/
+    border: none; /* Remove default borders */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.skip-link {
+    display: block; /* Each link appears on a new line */
+    margin-bottom: 5px; /* Adjust spacing between links */
+}
+
+
+/* Hover and Focus States */
+button:hover,
+button:focus {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    outline: none; /* Remove default focus outline */
+}
+
+/* Active State */
+button:active {
+    background-color: #003f8c; /* Even darker blue on click */
+    transform: translateY(2px); /* Slight push-down effect */
+}
+
+/* Dark Mode Button Styling */
+body.dark-mode button {
+    padding: 5px 10px;
+    background-color: #8ec1f2;
+    color: #000000; /* text */
+}
+
+body.dark-mode button:hover,
+body.dark-mode button:focus {
+    background-color: #52a5e0; /* Lighter blue on hover/focus in dark mode */
+}
+
+
+/*styles for dark mode*/
+body.dark-mode {
+    background-color: #333;
+    color: #f9f9f9;
+    animation: fade-in 1s ease-out;
+}
+
+body.dark-mode header {
+    background-color: #444;
+    color: #fff;   
+}
+
+body.dark-mode footer {
+    background-color: #222; 
+    color: #f9f9f9; 
+    /*border-top: 1px solid #555;*/
+}
+
+
+/*control the layout of elements*/
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+
+/* Light off/on effect */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
